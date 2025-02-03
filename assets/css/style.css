@@ -1,1 +1,168 @@
-h1 {color:blue;}
+/* This is just to test that the file is linked correctly
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #FFF0F5;
+    color: #333;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 55px;
+    background-color: #FF69B4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 20px ;
+}
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    background-color: #FFB6C1;
+}
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.search-box input {
+    width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+}
+.search-box button {
+    padding: 12px 20px;
+    background-color: #FFC107;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.search-box button:hover {
+    background-color: #FFA000;
+}
+.suggestions {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+footer {
+    margin-top: auto;
+    padding: 10px 0;
+    background-color: #FF1493;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+} */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #FFF9F2; /* Primary Color 2 */
+    color: #5A3E36; /* Text Color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+    background-color: #FFE8C5; /* Primary Color 1 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #5A3E36; /* Text Color */
+    font-size: 28px;
+}
+
+.navbar .nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #5A3E36; /* Text Color */
+    font-size: 16px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    background-color: #FFE8C5; /* Primary Color 1 */
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+}
+
+.hero .search-box {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.hero .search-box input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.hero .search-box button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF6B81; /* Highlight Color 1 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero .search-box button:hover {
+    background-color: #FFD93D; /* Highlight Color 2 */
+}
+
+.hero .suggestions {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+footer {
+    margin-top: auto;
+    padding: 10px 0;
+    background-color: #FF6B81; /* Highlight Color 1 */
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
