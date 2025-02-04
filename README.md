@@ -8,7 +8,7 @@ The live project can found here: <a href="" target="_blank">Live Project</a>
 
 <h2 text-align="center" id="TOC">Table of Contents</h2>
 
-- [Hackathon1](#hackathon1-recipe-finder)
+- [Hackathon1 - Recipe Finder](#hackathon1-recipe-finder)
   - [Overview](#overview)
   - [Table of Contents](#TOC)
 - [Project Planning](#project-planning)
