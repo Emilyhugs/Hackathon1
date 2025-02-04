@@ -1,1 +1,91 @@
-h1 {color:blue;}
+/* ✅ Default Styles (Mobile-First) */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* ✅ Style for search bar */
+input {
+    padding: 10px;
+    width: 80%; /* Full width on mobile */
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e5533d;
+}
+
+/* ✅ Recipe Container */
+#recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* ✅ Recipe Card (Mobile-Friendly by Default) */
+.recipe-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    width: 90%; /* Take full width on small screens */
+    max-width: 300px; /* Prevent it from being too big */
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.recipe-card img {
+    width: 100%; /* Makes images fully responsive */
+    border-radius: 10px;
+    height: auto;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* ✅ Recipe Details Page */
+.recipe-details {
+    text-align: center;
+    padding: 20px;
+}
+
+.recipe-details img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+}
+
+/* ✅ 💻 Media Query: Adjust for Larger Screens (Tablets & Desktops) */
+@media screen and (min-width: 600px) {
+    .recipe-card {
+        width: 45%; /* Two cards per row on tablets */
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .recipe-card {
+        width: 30%; /* Three cards per row on larger screens */
+    }
+}
