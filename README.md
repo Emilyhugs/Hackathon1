@@ -26,6 +26,8 @@ The live project can found here: <a href="" target="_blank">Live Project</a>
   - [Responsive Design](#responsive-design)
 - [Deployment](#deployment)
 - [Testing](#testing)
+- [Content](#content)
+- [Media](#media)
 - [AI Implementation and Orchestration](#ai-implementation-and-orchestration)
 - [Future Enhancements](#future-enhancements)
 - [Collaborators](#collaborators)
@@ -153,6 +155,10 @@ We tested and debugged the site regularly throughout the process, mainly using C
 ### Lighthouse
 
 ![Lighthouse testing]()
+
+**Content**
+
+**Media**
 
 **AI Implementation and Orchestration**
 
