@@ -19,6 +19,7 @@
 
 <body>
     <!--Main-->
+    <main>
     <header>
       <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary"> <!--Sticky top applied to see how it works in the flow, but can be changed-->
         <div class="container-fluid">
@@ -42,20 +43,29 @@
         </div>
       </nav>
     </header>
-    <div class="hero">
-        <h1>Discover Delicious Recipes with Just a Search!</h1>
-        <div class="search-box">
-            <input type="text" placeholder="Search for a recipe...">
-            <button>Find Recipes</button>
-        </div>
-        <div class="suggestions">
+    <!--hero section-->
+    <div class="container">
+       <h1 class="tagline">Discover Delicious Recipes with Just a Search!</h1>
+        <div class="mealSearchBox">
+          <div class="input-group mb-3">
+            <input class="searchText" id="searchInput" type="text" placeholder="Search for a recipe...">
+            <button type="submit" value="submit" class="btn btn-outline-secondary" id="search-btn"><i class="fas fa-search"></i></button>
+            <button class="btn btn-outline-secondary" id="random-search-btn" type="submit" value="submit"></i>Random Recipe</button>
+          </div>
+          <div class="suggestions">
             Try searching for: Pasta, Vegan, 30-minute meals
         </div>
-    </div>
-
+          </div>
+        </div>
+      </main>
     <!--Footer-->
-    <footer>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, aspernatur nihil quibusdam fugiat cumque dolor minima facilis, iste distinctio itaque natus vel officiis earum optio sed harum. Vitae, vel voluptatum.</p>
+    <section id="footer-section">
+        <footer class="footer mt-auto py-3 d-flex">
+          <div class="footer-container">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, aspernatur nihil quibusdam fugiat cumque dolor minima facilis, iste distinctio itaque natus vel officiis earum optio sed harum. Vitae, vel voluptatum.</p>
+          </div>
+      </footer>
+        
     <!--Bootstrap JS link-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!-- Javascript link -->
