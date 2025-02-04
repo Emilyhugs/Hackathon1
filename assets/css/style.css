@@ -42,7 +42,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 800px;
+    max-width: 80%;
     margin: 20px auto;
     padding: 10px;
 }
@@ -52,8 +52,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 500px; /* Limits width for better design */
+    max-width: 80%; /* Limits width for better & responsive design */
 }
 
 /* Search Input */
@@ -66,14 +65,12 @@ main {
     outline: none;
     transition: 0.3s ease-in-out;
 }
-/* Hover effect */
 
 /* Focus effect on input */
 .searchText:focus {
     border-color: #ff6f61; /* Highlight color */
     box-shadow: 0px 0px 5px rgba(255, 111, 97, 0.6);
 }
-
 /* Search & Random buttons */
 .btn {
     padding: 12px 18px;
