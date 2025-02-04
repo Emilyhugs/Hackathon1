@@ -44,19 +44,40 @@
       </nav>
     </header>
     <!--hero section-->
-    <div class="container">
+    <div class="meal-search-container">
        <h1 class="tagline">Discover Delicious Recipes with Just a Search!</h1>
         <div class="mealSearchBox">
           <div class="input-group mb-3">
             <input class="searchText" id="searchInput" type="text" placeholder="Search for a recipe...">
-            <button type="submit" value="submit" class="btn btn-outline-secondary" id="search-btn"><i class="fas fa-search"></i></button>
-            <button class="btn btn-outline-secondary" id="random-search-btn" type="submit" value="submit"></i>Random Recipe</button>
+            <button type="submit" class="btn btn-outline-secondary btn-lg" id="search-btn"><i class="fas fa-search"></i></button>
+            <button class="btn btn-outline-secondary btn-lg" id="random-search-btn" type="submit"></i>Random Recipe</button>
           </div>
           <div class="suggestions">
             Try searching for: Pasta, Vegan, 30-minute meals
         </div>
           </div>
         </div>
+
+    <!--Recipe Cards-->
+    <div class = "meal-result">
+      <h2 class = "title">Your Search Results:</h2>
+      <div id= "meal">
+        <!-- meal item -->
+        <div class = "meal-item">
+          <div class = "meal-img">
+            <img src = "food.jpg" alt = "food">
+          </div>
+          <div class = "meal-name">
+            <h3>Potato Chips</h3>
+            <a href = "#" class = "recipe-btn">Get Recipe</a>
+          </div>
+        </div> 
+        <!-- end of meal item -->
+      </div>
+    </div>
+
+
+
       </main>
     <!--Footer-->
     <section id="footer-section">

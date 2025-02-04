@@ -1,21 +1,33 @@
+/*Google Fonts go here*/
+
+/* /*CSS Variables*/
+/* :root {
+    --primary-font: 
+    --secondary-font: 
+    --primary-color: 
+    
+    --secondary-color: 
+    
+    --highlight-color: 
+    
+    --last-highlight-color: 
+} */
+
 main {
     display: flex;
     flex-direction: column;
    min-height: 100vh;
 }
-.container {
+
+/* Search Bar */
+.meal-search-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
+    background-color: #fadf7f;
 }
-
-.container .h1  {
-    display: flex;
-    justify-content: center;
-}
-
 .tagline {
     font-size: clamp(1.2rem, 5vw, 2rem); /* Adjust font size dynamically */
     text-align: center; 
@@ -23,34 +35,74 @@ main {
     margin: 10px auto; /* Center horizontally */
 }
 
+/* Improved Search Bar Styling */
 .mealSearchBox {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin:20px 20px;
-    width:100%;
-    max-width:800px ;
-}
-.suggestions {
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    flex-wrap: wrap;
-    margin-top:10px;
-    text-align: center;
     width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
 }
 
+/* Input group container */
 .input-group {
     display: flex;
-            justify-content: center;
- 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px; /* Limits width for better design */
 }
 
-.input-group .searchText {
-    flex:1;
-    border-radius: 10px; /* Softer border radius */
-    margin-right: 10px; /* Add space between the input and buttons */
-    padding: 10px; /* Add padding to the input */
+/* Search Input */
+.searchText {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 25px 0 0 25px; /* Rounded left corners */
+    outline: none;
+    transition: 0.3s ease-in-out;
 }
+/* Hover effect */
+
+/* Focus effect on input */
+.searchText:focus {
+    border-color: #ff6f61; /* Highlight color */
+    box-shadow: 0px 0px 5px rgba(255, 111, 97, 0.6);
+}
+
+/* Search & Random buttons */
+.btn {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border: solid #ff6f61;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+    .btn:hover{ 
+        background-color:grey!important;
+        color: white !important;;
+    }
+/* Search Button */
+#search-btn {
+    border-radius: 0 25px 25px 0; /* Rounded right corners */
+    margin-left: -1px; /* Removes gap between input and button */
+    border-color: #ff6f61;
+}
+
+/* Random Recipe Button */
+#random-search-btn {
+    margin-left: 10px;
+    border-radius: 25px;
+    background-color: #f8f9fa;
+    color: black;
+    border-color: #ff6f61;
+}
+
+
+
+/*Meal Cards*/
