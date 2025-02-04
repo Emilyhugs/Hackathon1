@@ -14,92 +14,150 @@
 } */
 
 main {
-    display: flex;
-    flex-direction: column;
-   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Search Bar */
 .meal-search-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 20px;
-    background-color: #fadf7f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #fadf7f;
 }
 .tagline {
-    font-size: clamp(1.2rem, 5vw, 2rem); /* Adjust font size dynamically */
-    text-align: center; 
-    max-width: 90%; /* Prevent overflowing */
-    margin: 10px auto; /* Center horizontally */
+  font-size: clamp(1.2rem, 5vw, 2rem); /* Adjust font size dynamically */
+  text-align: center;
+  max-width: 90%; /* Prevent overflowing */
+  margin: 10px auto; /* Center horizontally */
 }
 
 /* Improved Search Bar Styling */
 .mealSearchBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 80%;
-    margin: 20px auto;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 10px;
 }
 
 /* Input group container */
 .input-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 80%; /* Limits width for better & responsive design */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%; /* Limits width for better & responsive design */
 }
 
 /* Search Input */
 .searchText {
-    flex: 1;
-    padding: 12px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 25px 0 0 25px; /* Rounded left corners */
-    outline: none;
-    transition: 0.3s ease-in-out;
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 25px 0 0 25px; /* Rounded left corners */
+  outline: none;
+  transition: 0.3s ease-in-out;
 }
 
 /* Focus effect on input */
 .searchText:focus {
-    border-color: #ff6f61; /* Highlight color */
-    box-shadow: 0px 0px 5px rgba(255, 111, 97, 0.6);
+  border-color: #ff6f61; /* Highlight color */
+  box-shadow: 0px 0px 5px rgba(255, 111, 97, 0.6);
 }
 /* Search & Random buttons */
 .btn {
-    padding: 12px 18px;
-    font-size: 16px;
-    font-weight: bold;
-    border: solid #ff6f61;
-    color: white;
-    transition: all 0.3s ease-in-out;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  border: solid #ff6f61;
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
-    .btn:hover{ 
-        background-color:grey!important;
-        color: white !important;;
-    }
+.btn:hover {
+  background-color: grey !important;
+  color: white !important;
+}
 /* Search Button */
 #search-btn {
-    border-radius: 0 25px 25px 0; /* Rounded right corners */
-    margin-left: -1px; /* Removes gap between input and button */
-    border-color: #ff6f61;
+  border-radius: 0 25px 25px 0; /* Rounded right corners */
+  margin-left: -1px; /* Removes gap between input and button */
+  border-color: #ff6f61;
 }
 
 /* Random Recipe Button */
 #random-search-btn {
-    margin-left: 10px;
-    border-radius: 25px;
-    background-color: #f8f9fa;
-    color: black;
-    border-color: #ff6f61;
+  margin-left: 10px;
+  border-radius: 25px;
+  background-color: #f8f9fa;
+  color: black;
+  border-color: #ff6f61;
 }
 
+/* Recipe Container */
+#recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
 
+/* Recipe Card (Mobile-Friendly by Default) */
+.recipe-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  width: 90%; /* Take full width on small screens */
+  max-width: 300px; /* Prevent it from being too big */
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
 
-/*Meal Cards*/
+.recipe-card img {
+  width: 100%; /* Makes images fully responsive */
+  border-radius: 10px;
+  height: auto;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Recipe Details Page */
+.recipe-details {
+  text-align: center;
+  padding: 20px;
+}
+
+.recipe-details img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+}
+
+/* Media Query: Adjust for Larger Screens (Tablets & Desktops) */
+@media screen and (min-width: 600px) {
+  .recipe-card {
+    width: 45%; /* Two cards per row on tablets */
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .recipe-card {
+    width: 30%; /* Three cards per row on larger screens */
+  }
+}
