@@ -10,6 +10,15 @@ document.getElementById("search-btn").addEventListener("click", function (e) {
   searchRecipes();
 });
 
+document
+  .getElementById("searchInput")
+  .addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent form submission
+      searchRecipes();
+    }
+  });
+
 async function searchRecipes() {
   const searchInput = document.getElementById("searchInput").value.trim(); // Get search text
   if (!searchInput) return; // Stop if input is empty
