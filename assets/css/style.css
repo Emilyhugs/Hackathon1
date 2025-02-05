@@ -224,7 +224,7 @@ button {
   padding: 10px;
 }
 .meal-details .content .ingredients {
-  align-self: center;
+  align-self: flex-start;
 }
 
 /* Footer styling */
@@ -329,7 +329,7 @@ footer {
 }
 
 /* Media Query for smaller screens */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 599px) {
   .input-group {
     flex-direction: row;
     width: 100%;
@@ -343,6 +343,9 @@ footer {
   .btn {
     padding: 8px 10px;
     font-size: 12px;
+  }
+  .meal-details .content .ingredients {
+    align-self: center;
   }
 }
 
