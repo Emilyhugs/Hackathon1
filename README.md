@@ -105,9 +105,7 @@ These wireframes show the initial landing page, the recipe cards, and the random
 
 # Navbar
 
-The navigation bar is a Bootstrap component and it allows for easy navigation around (although at the moment it isn't functional - it will be more helpful after future features are in place). The navbar also encorporats the favicon/logo for the website.
-
-![Hero-image](assets/images/readme-images/hero-image.alt.webp)
+The navigation bar is a Bootstrap component and it allows for easy navigation around (although at the moment it isn't functional - it will be more helpful after future features are in place). The navbar also encorporates the favicon/logo for the website.
 
 ## Searchbar
 
