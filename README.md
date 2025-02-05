@@ -4,7 +4,7 @@
 
 Recipe Finder is our first hackathon project implementing an interactive Front-End web application using HTML, CSS, and Javascipt as part of Code Institute's AI Augmented Full Stack Software Developer Bootcamp. Our project's main goal was to successfully connect to an API. We decided to make a recipe finder website and connect it to a Recipe API so that users can easily search and find recipes.
 
-The live project can found here: <a href="" target="_blank">Live Project</a>
+The live project can found here: <a href="https://emilyhugs.github.io/Hackathon1/" target="_blank">Live Project</a>
 
 <h2 text-align="center" id="TOC">Table of Contents</h2>
 
@@ -32,21 +32,21 @@ The live project can found here: <a href="" target="_blank">Live Project</a>
 - [Future Enhancements](#future-enhancements)
 - [Collaborators](#collaborators)
 
-<p text-align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
+<p align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
 <br>
 
 ## Project Planning
 
-To plan our project, we used a [miro board](https:www.miro.com) where we could all visualise our ideas and slack for huddles/chatting via message.
+To plan our project, we used a [miro board](https://miro.com/) where we could all visualise our ideas and slack for huddles/chatting via message.
 
-<p text-align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
+<p align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
 <br>
 
 ## UX Design
 
 ## User Stories
 
-The user stories for this project as well as their acceptance criteria and tasks can be found in the <a href="" target="_blank">project board</a>.
+The user stories for this project as well as their acceptance criteria and tasks can be found in the <a href="https://github.com/users/Emilyhugs/projects/8/views/1" target="_blank">project board</a>.
 
 - As a user, I want to access the website on any device (desktop, tablet, mobile) so that I can find recipes conveniently regardless of where I am.
 - As a user, I want to search for meals by ingredients, meal name, or category so that I can quickly find recipes that match my preferences or available ingredients.
@@ -66,30 +66,34 @@ The user stories for this project as well as their acceptance criteria and tasks
 
 ## Colors
 
-To ensure the colour palette was accessible for our users, we checked with Colour Contrast Checker (also available as extension on Chrome Web Store).
+We wanted the colours to be visually appealing, warm, and fresh.
+To ensure the colour palette was accessible for our users, we checked with [Colour Contrast Checker](https://colourcontrast.cc/)(also available as extension on Chrome Web Store).
 
-![Colour palette]() NOT DONE THIS YET!
+![Colour palette](assets/images/recipe-finder-color-palette.png)
 
 # Fonts
 
 As with the color palette, we wanted the font to be visually appealing and easily readable for the users to ensure they have a positive experience visiting the website.
-For this project, we used "" and "" fonts and implemented them via [Google Fonts](https://fonts.google.com) using a direct import code within the style.css file.
+For this project, we used Merriweather Sans andOpen Sans fonts and implemented them via [Google Fonts](https://fonts.google.com) using a direct import code within the style.css file.
 
 # Wireframes
 
 The wireframes for this project have been created using [Balsamiq](https://balsamiq.com/). They show the key features that guided us in creating our website, ensuring responsiveness across different screen sizes.
 
 **Mobile Wireframe**
-![Mobile Wireframe]()
+These wireframes show the initial landing page, the recipe cards, and the random meal generator.
+![Mobile Wireframe](assets/images/mobile-wireframe.png)
 
 **Tablet Wireframe**
+The tablet wireframes are similar to the desktop wireframes, except that the recipe cards show 3 in a row instead of four.
 
-![Tablet Wireframe]()
+![Tablet Wireframe](assets/images/tablet-wireframe.png)
 
 **Desktop Wireframes**
-![Desktop Wireframe 1] ()
+These wireframes show the initial landing page, the recipe cards, and the random meal generator.
+![Desktop Wireframe](assets/images/desktop-wireframe.png)
 
-<p text-align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
+<p align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
 <br>
 ## Features
 
@@ -112,7 +116,7 @@ We included this button so that the user can find a new recipe and be inspired b
 Here is what the website looks like on different screens:
 ![Responsiveness]() NOT DONE THIS YET
 
-<p text-align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
+<p align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
 <br>
 
 ## Deployment
@@ -131,7 +135,7 @@ The steps to deploy are as follows:
 - On the right-hand side in the Deployments section click on 'github-pages'.
 - The latest deployed link will appear at the top of the page.
 
-<p text-align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
+<p align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
 <br>
 
 ## Testing
