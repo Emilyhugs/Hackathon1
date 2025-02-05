@@ -198,6 +198,16 @@ We tested and debugged the site regularly throughout the process, mainly using C
 
 **AI Implementation and Orchestration**
 
+AI played a key role in helping develop the Recipe Finder app. It provided guidance on:
+
+Building the Framework: AI helped structure the app using HTML for layout, CSS for responsive styling, and JavaScript for logic, specifically integrating the external API, managing the logic of making requests to the API, and dynamically displaying the fetched data. It also assisted with the fetch requests and how to structure URLs for searching and fetching random recipes.
+
+UI and Design: AI provided suggestions for a responsive layout using CSS flexbox and for designing recipe cards in a grid format. We requested it to make the design mobile-first and prioritise this in the UI design aspect.
+
+Additionally, the clear and useful prompts we provided to AI played a significant role in the success of this project. By framing questions and requests in a precise manner, we were able to get focused and actionable responses, which saved us time and made the development process smoother.
+
+This collaboration with AI ensured we could add more features as the skeleton of the API was completed, allowing us to concentrate on design, styling, and fixing any errors. The main benefit, however, was the time saved. Using AI in this way ensured the app functions smoothly and is styled responsively.
+
 ## Future Enhancements
 
 ### Favourites Button
