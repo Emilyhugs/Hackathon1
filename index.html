@@ -30,7 +30,7 @@
               class="d-inline-block align-text-top">
             Bestest Recipe Finder EVER!
           </a>
-          
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -82,7 +82,8 @@
           </div>
           <div class="footer-socials">
             <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i
+                class="fab fa-instagram"></i></a>
             <a href="https://www.twitter.com/" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
           </div>
@@ -95,6 +96,19 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal Structure -->
+    <div id="recipeModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" src="" alt="">
+        <h3>Ingredients</h3>
+        <ul id="modalIngredients"></ul>
+        <h3>Instructions</h3>
+        <p id="modalInstructions"></p>
+      </div>
+    </div>
 
     <!--Bootstrap JS link-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

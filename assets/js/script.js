@@ -40,11 +40,27 @@ function displayRecipes(recipes) {
   }
 
   recipes.forEach((recipe) => {
+    let ingredients = "";
+    for (let i = 1; i <= 20; i++) {
+      const ingredient = recipe[`strIngredient${i}`];
+      const measure = recipe[`strMeasure${i}`];
+      if (ingredient) {
+        ingredients += `<li>${ingredient} - ${measure}</li>`;
+      }
+    }
+
     let recipeCard = `
             <div class="recipe-card">
                 <h3>${recipe.strMeal}</h3>
                 <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
                 <p>${recipe.strInstructions.substring(0, 100)}...</p>
+                <div class="tooltiptext">
+                <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
+                <h4>Ingredients</h4>
+          <ul>${ingredients}</ul>
+          <h4>Instructions</h4>
+          <p>${recipe.strInstructions}</p>
+                </div>
             </div>
         `;
     container.innerHTML += recipeCard;
@@ -68,4 +84,42 @@ function hideLoadingIndicator() {
 function displayErrorMessage(message) {
   const container = document.getElementById("recipe-container");
   container.innerHTML = `<p>${message}</p>`;
+}
+
+function showRecipeDetails(recipe) {
+  console.log("Recipe details:", recipe); // Log the recipe details
+
+  const modal = document.getElementById("recipeModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalImage = document.getElementById("modalImage");
+  const modalIngredients = document.getElementById("modalIngredients");
+  const modalInstructions = document.getElementById("modalInstructions");
+
+  modalTitle.textContent = recipe.strMeal;
+  modalImage.src = recipe.strMealThumb;
+  modalImage.alt = recipe.strMeal;
+  modalInstructions.textContent = recipe.strInstructions;
+
+  modalIngredients.innerHTML = "";
+  for (let i = 1; i <= 20; i++) {
+    const ingredient = recipe[`strIngredient${i}`];
+    const measure = recipe[`strMeasure${i}`];
+    if (ingredient) {
+      const li = document.createElement("li");
+      li.textContent = `${ingredient} - ${measure}`;
+      modalIngredients.appendChild(li);
+    }
+  }
+  modal.style.display = "block";
+
+  const closeBtn = document.getElementsByClassName("close")[0];
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
 }
