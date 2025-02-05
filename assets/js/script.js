@@ -40,33 +40,16 @@ function displayRecipes(recipes) {
   }
 
   recipes.forEach((recipe) => {
-    let ingredients = "";
-    for (let i = 1; i <= 20; i++) {
-      const ingredient = recipe[`strIngredient${i}`];
-      const measure = recipe[`strMeasure${i}`];
-      if (ingredient) {
-        ingredients += `<li>${ingredient} - ${measure}</li>`;
-      }
-    }
-
     let recipeCard = `
-            <div class="recipe-card">
+            <div class="recipe-card" onclick="showRecipeDetails(${JSON.stringify(recipe).replace(/"/g, '&quot;')})">
                 <h3>${recipe.strMeal}</h3>
                 <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
                 <p>${recipe.strInstructions.substring(0, 100)}...</p>
-                <div class="tooltiptext">
-                <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
-                <h4>Ingredients</h4>
-          <ul>${ingredients}</ul>
-          <h4>Instructions</h4>
-          <p>${recipe.strInstructions}</p>
-                </div>
             </div>
         `;
     container.innerHTML += recipeCard;
   });
 }
-
 function clearSearchInput() {
   document.getElementById("searchInput").value = "";
 }
