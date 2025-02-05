@@ -301,7 +301,7 @@ footer {
   margin-bottom: 10px;
 }
 .footer-socials a {
-  color: #ff6f61;
+  color: #4b4b4d;
   font-size: 20px;
   transition: color 0.3s ease;
 }
@@ -315,7 +315,7 @@ footer {
   gap: 20px;
 }
 .footer-links a {
-  color: #ff6f61; /* Change color */
+  color: #4b4b4d; /* Change color */
   text-decoration: none;
   transition: color 0.3s ease;
 }
