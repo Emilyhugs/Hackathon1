@@ -1,4 +1,4 @@
-# Hackathon1 - Recipe Finder
+# Hackathon1 Recipe Finder
 
 # Overview
 
@@ -74,27 +74,33 @@ To ensure the colour palette was accessible for our users, we checked with [Colo
 # Fonts
 
 As with the color palette, we wanted the font to be visually appealing and easily readable for the users to ensure they have a positive experience visiting the website.
-For this project, we used Merriweather Sans andOpen Sans fonts and implemented them via [Google Fonts](https://fonts.google.com) using a direct import code within the style.css file.
+For this project, we used Merriweather Sans and Open Sans fonts and implemented them via [Google Fonts](https://fonts.google.com) using a direct import code within the style.css file.
 
 # Wireframes
 
 The wireframes for this project have been created using [Balsamiq](https://balsamiq.com/). They show the key features that guided us in creating our website, ensuring responsiveness across different screen sizes.
 
 **Mobile Wireframe**
+
 These wireframes show the initial landing page, the recipe cards, and the random meal generator.
+
 ![Mobile Wireframe](assets/images/mobile-wireframe.png)
 
 **Tablet Wireframe**
-The tablet wireframes are similar to the desktop wireframes, except that the recipe cards show 3 in a row instead of four.
+
+The tablet wireframes are similar to the desktop wireframes, except that the recipe cards show 3 in a row instead of 4.
 
 ![Tablet Wireframe](assets/images/tablet-wireframe.png)
 
 **Desktop Wireframes**
+
 These wireframes show the initial landing page, the recipe cards, and the random meal generator.
+
 ![Desktop Wireframe](assets/images/desktop-wireframe.png)
 
 <p align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
 <br>
+
 ## Features
 
 # Navbar
