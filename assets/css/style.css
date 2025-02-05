@@ -1,18 +1,22 @@
 /*Google Fonts go here*/
+/*Merriweather Sans & Open Sans*/
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-/* /*CSS Variables*/
-/* :root {
-    --primary-font: 
-    --secondary-font: 
-    --primary-color: 
-    
-    --secondary-color: 
-    
-    --highlight-color: 
-    
-    --last-highlight-color: 
-} */
+/*CSS Variables*/
+:root {
+  --primary-font: "Open Sans", sans-serif;
+  --secondary-font: "Merriweather Sans", sans-serif;
+}
+/*Global Styles*/
+h1,
+h2,
+h3 {
+  font-family: var(--secondary-font);
+}
 
+p {
+  font-family: var(--primary-font);
+}
 main {
   display: flex;
   flex-direction: column;
@@ -162,6 +166,83 @@ button {
   }
 }
 
+/* Meal Details */
+.meal-details {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meal-details img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.meal-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.meal-details p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.meal-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.meal-details ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.meal-details a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.meal-details a:hover {
+  background-color: #e65c50;
+}
+
+/* Flexbox layout for ingredients and instructions */
+.meal-details .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.meal-details .content .ingredients,
+.meal-details .content .instructions {
+  flex: 1;
+  padding: 10px;
+}
+
+.meal-details .content .ingredients {
+  text-align: center;
+}
+
+.meal-details .content .instructions {
+  text-align: center;
+}
+
 /* Footer styling */
 footer {
   background-color: #fadf7f;
@@ -174,7 +255,8 @@ footer {
 }
 
 /* Ensure footer stays at the bottom */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -187,4 +269,87 @@ html, body {
 
 main {
   flex: 1;
+}
+footer {
+  justify-content: center;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.footer-socials a {
+  color: #ff6f61;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+.footer-socials a:hover {
+  color: #e65c50; /* Change color on hover */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.footer-links a {
+  color: #ff6f61; /* Change color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover {
+  color: #e65c50; /* Change color on hover */
+}
+
+/* Media Query: Adjust for Larger Screens (Tablets & Desktops) */
+@media screen and (min-width: 600px) {
+  .recipe-card {
+    width: 45%; /* Two cards per row on tablets */
+  }
+  .meal-details {
+    max-width: 800px; /* Increase max-width for larger screens */
+    padding: 30px; /* Increase padding for larger screens */
+  }
+  .meal-details .content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .meal-details .content .ingredients,
+  .meal-details .content .instructions {
+    flex: 1;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .recipe-card {
+    width: 30%; /* Three cards per row on larger screens */
+  }
+  .meal-details {
+    max-width: 1000px; /* Increase max-width for larger screens */
+    padding: 40px; /* Increase padding for larger screens */
+  }
 }
