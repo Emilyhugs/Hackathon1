@@ -56,7 +56,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 80%; /* Limits width for better & responsive design */
+  width: 100%;
+  max-width: 600px; /* Limits width for better & responsive design */
 }
 
 /* Search Input */
@@ -85,7 +86,7 @@ main {
   transition: all 0.3s ease-in-out;
 }
 .btn:hover {
-  background-color: grey !important;
+  background-color: #4b4b4d !important;
   color: white !important;
 }
 /* Search Button */
@@ -153,19 +154,6 @@ button {
   margin: 20px auto;
 }
 
-/* Media Query: Adjust for Larger Screens (Tablets & Desktops) */
-@media screen and (min-width: 600px) {
-  .recipe-card {
-    width: 45%; /* Two cards per row on tablets */
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .recipe-card {
-    width: 30%; /* Three cards per row on larger screens */
-  }
-}
-
 /* Meal Details */
 .meal-details {
   background: #fff;
@@ -227,6 +215,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: center;
 }
 
 .meal-details .content .ingredients,
@@ -234,13 +223,8 @@ button {
   flex: 1;
   padding: 10px;
 }
-
 .meal-details .content .ingredients {
-  text-align: center;
-}
-
-.meal-details .content .instructions {
-  text-align: center;
+  align-self: flex-start;
 }
 
 /* Footer styling */
@@ -301,7 +285,7 @@ footer {
   margin-bottom: 10px;
 }
 .footer-socials a {
-  color: #ff6f61;
+  color: #4b4b4d;
   font-size: 20px;
   transition: color 0.3s ease;
 }
@@ -315,7 +299,7 @@ footer {
   gap: 20px;
 }
 .footer-links a {
-  color: #ff6f61; /* Change color */
+  color: #4b4b4d; /* Change color */
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -341,6 +325,27 @@ footer {
   .meal-details .content .instructions {
     flex: 1;
     padding: 10px;
+  }
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 599px) {
+  .input-group {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .searchText {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .meal-details .content .ingredients {
+    align-self: center;
   }
 }
 
