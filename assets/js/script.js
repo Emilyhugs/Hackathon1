@@ -85,7 +85,7 @@ async function fetchRandomMeal() {
       }
 
       const html = `
-    <div class="random-meal-details">
+    <div class="meal-details">
       <h2>${meal.strMeal}</h2>
       <p><strong>Category:</strong> ${meal.strCategory}</p>
       <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
