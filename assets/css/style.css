@@ -1,91 +1,355 @@
-/* ✅ Default Styles (Mobile-First) */
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+/*Google Fonts go here*/
+/*Merriweather Sans & Open Sans*/
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/*CSS Variables*/
+:root {
+  --primary-font: "Open Sans", sans-serif;
+  --secondary-font: "Merriweather Sans", sans-serif;
+}
+/*Global Styles*/
+h1,
+h2,
+h3 {
+  font-family: var(--secondary-font);
 }
 
-/* ✅ Style for search bar */
-input {
-    padding: 10px;
-    width: 80%; /* Full width on mobile */
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+p {
+  font-family: var(--primary-font);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-button {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #ff6347; /* Tomato color */
-    color: white;
-    border: none;
-    border-radius: 5px;
+/* Search Bar */
+.meal-search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #fadf7f;
+}
+.tagline {
+  font-size: clamp(1.2rem, 5vw, 2rem); /* Adjust font size dynamically */
+  text-align: center;
+  max-width: 90%; /* Prevent overflowing */
+  margin: 10px auto; /* Center horizontally */
 }
 
-button:hover {
-    background-color: #e5533d;
+/* Improved Search Bar Styling */
+.mealSearchBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 10px;
 }
 
-/* ✅ Recipe Container */
+/* Input group container */
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%; /* Limits width for better & responsive design */
+}
+
+/* Search Input */
+.searchText {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 25px 0 0 25px; /* Rounded left corners */
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+/* Focus effect on input */
+.searchText:focus {
+  border-color: #ff6f61; /* Highlight color */
+  box-shadow: 0px 0px 5px rgba(255, 111, 97, 0.6);
+}
+/* Search & Random buttons */
+.btn {
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  border: solid #ff6f61;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: grey !important;
+  color: white !important;
+}
+/* Search Button */
+#search-btn {
+  border-radius: 0 25px 25px 0; /* Rounded right corners */
+  margin-left: -1px; /* Removes gap between input and button */
+  border-color: #ff6f61;
+}
+
+/* Random Recipe Button */
+#random-search-btn {
+  margin-left: 10px;
+  border-radius: 25px;
+  background-color: #f8f9fa;
+  color: black;
+  border-color: #ff6f61;
+}
+
+/* Recipe Container */
 #recipe-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-/* ✅ Recipe Card (Mobile-Friendly by Default) */
+/* Recipe Card (Mobile-Friendly by Default) */
 .recipe-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px;
-    width: 90%; /* Take full width on small screens */
-    max-width: 300px; /* Prevent it from being too big */
-    text-align: center;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: transform 0.2s ease-in-out;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  width: 90%; /* Take full width on small screens */
+  max-width: 300px; /* Prevent it from being too big */
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
 }
 
 .recipe-card img {
-    width: 100%; /* Makes images fully responsive */
-    border-radius: 10px;
-    height: auto;
+  width: 100%; /* Makes images fully responsive */
+  border-radius: 10px;
+  height: auto;
 }
 
 .recipe-card:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
-/* ✅ Recipe Details Page */
+/* Recipe Details Page */
 .recipe-details {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .recipe-details img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
 }
 
 button {
-    display: block;
-    margin: 20px auto;
+  display: block;
+  margin: 20px auto;
 }
 
-/* ✅ 💻 Media Query: Adjust for Larger Screens (Tablets & Desktops) */
+/* Media Query: Adjust for Larger Screens (Tablets & Desktops) */
 @media screen and (min-width: 600px) {
-    .recipe-card {
-        width: 45%; /* Two cards per row on tablets */
-    }
+  .recipe-card {
+    width: 45%; /* Two cards per row on tablets */
+  }
 }
 
 @media screen and (min-width: 900px) {
-    .recipe-card {
-        width: 30%; /* Three cards per row on larger screens */
-    }
+  .recipe-card {
+    width: 30%; /* Three cards per row on larger screens */
+  }
+}
+
+/* Meal Details */
+.meal-details {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meal-details img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.meal-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.meal-details p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.meal-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.meal-details ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.meal-details a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.meal-details a:hover {
+  background-color: #e65c50;
+}
+
+/* Flexbox layout for ingredients and instructions */
+.meal-details .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.meal-details .content .ingredients,
+.meal-details .content .instructions {
+  flex: 1;
+  padding: 10px;
+}
+
+.meal-details .content .ingredients {
+  text-align: center;
+}
+
+.meal-details .content .instructions {
+  text-align: center;
+}
+
+/* Footer styling */
+footer {
+  background-color: #fadf7f;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Ensure footer stays at the bottom */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+footer {
+  justify-content: center;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.footer-socials a {
+  color: #ff6f61;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+.footer-socials a:hover {
+  color: #e65c50; /* Change color on hover */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.footer-links a {
+  color: #ff6f61; /* Change color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover {
+  color: #e65c50; /* Change color on hover */
+}
+
+/* Media Query: Adjust for Larger Screens (Tablets & Desktops) */
+@media screen and (min-width: 600px) {
+  .recipe-card {
+    width: 45%; /* Two cards per row on tablets */
+  }
+  .meal-details {
+    max-width: 800px; /* Increase max-width for larger screens */
+    padding: 30px; /* Increase padding for larger screens */
+  }
+  .meal-details .content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .meal-details .content .ingredients,
+  .meal-details .content .instructions {
+    flex: 1;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .recipe-card {
+    width: 30%; /* Three cards per row on larger screens */
+  }
+  .meal-details {
+    max-width: 1000px; /* Increase max-width for larger screens */
+    padding: 40px; /* Increase padding for larger screens */
+  }
 }
