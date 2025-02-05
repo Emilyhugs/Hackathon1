@@ -56,7 +56,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 80%; /* Limits width for better & responsive design */
+  width: 100%;
+  max-width: 600px; /* Limits width for better & responsive design */
 }
 
 /* Search Input */
@@ -324,6 +325,24 @@ footer {
   .meal-details .content .instructions {
     flex: 1;
     padding: 10px;
+  }
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 360px) {
+  .input-group {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .searchText {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 8px 10px;
+    font-size: 12px;
   }
 }
 
