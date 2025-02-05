@@ -120,7 +120,7 @@ We included this button so that the user can find a new recipe and be inspired b
 ## Responsive Design
 
 Here is what the website looks like on different screens:
-![Responsiveness]() NOT DONE THIS YET
+![Responsiveness](assets/images/responsive-screen-mock-up.png)
 
 <p align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
 <br>
