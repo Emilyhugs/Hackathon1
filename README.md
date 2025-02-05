@@ -74,7 +74,7 @@ To ensure the colour palette was accessible for our users, we checked with [Colo
 # Fonts
 
 As with the color palette, we wanted the font to be visually appealing and easily readable for the users to ensure they have a positive experience visiting the website.
-For this project, we used Merriweather Sans andOpen Sans fonts and implemented them via [Google Fonts](https://fonts.google.com) using a direct import code within the style.css file.
+For this project, we used Merriweather Sans and Open Sans fonts and implemented them via [Google Fonts](https://fonts.google.com) using a direct import code within the style.css file.
 
 # Wireframes
 
@@ -100,6 +100,7 @@ These wireframes show the initial landing page, the recipe cards, and the random
 
 <p align="right"><a href="#hackathon1-recipe-finder">Back To Top</a></p>
 <br>
+
 ## Features
 
 # Navbar
