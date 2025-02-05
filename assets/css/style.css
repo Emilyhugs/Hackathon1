@@ -1,18 +1,22 @@
 /*Google Fonts go here*/
+/*Merriweather Sans & Open Sans*/
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-/* /*CSS Variables*/
-/* :root {
-    --primary-font: 
-    --secondary-font: 
-    --primary-color: 
-    
-    --secondary-color: 
-    
-    --highlight-color: 
-    
-    --last-highlight-color: 
-} */
+/*CSS Variables*/
+:root {
+  --primary-font: "Open Sans", sans-serif;
+  --secondary-font: "Merriweather Sans", sans-serif;
+}
+/*Global Styles*/
+h1,
+h2,
+h3 {
+  font-family: var(--secondary-font);
+}
 
+p {
+  font-family: var(--primary-font);
+}
 main {
   display: flex;
   flex-direction: column;
