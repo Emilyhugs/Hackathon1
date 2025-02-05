@@ -1,6 +1,3 @@
-//This is just to test that the file is linked correctly
-console.log("Hello, world!");
-
 window.onload = function () {
   document.getElementById("searchInput").focus(); // Focus on the search input field
 };
@@ -14,6 +11,8 @@ async function searchRecipes() {
   const searchInput = document.getElementById("searchInput").value.trim(); // Get search text
   if (!searchInput) return; // Stop if input is empty
 
+  showLoadingIndicator(); // Show loading indicator
+
   try {
     console.log(`Searching for recipes with: ${searchInput}`);
     const response = await fetch(
@@ -21,9 +20,13 @@ async function searchRecipes() {
     );
     const data = await response.json();
     console.log("API response data:", data);
+    hideLoadingIndicator(); // Hide loading indicator
     displayRecipes(data.meals);
+    clearSearchInput(); // Clear the search input
   } catch (error) {
     console.error("Error fetching recipes:", error);
+    hideLoadingIndicator(); // Hide loading indicator
+    displayErrorMessage("Failed to fetch recipes. Please try again later.");
   }
 }
 
@@ -46,4 +49,23 @@ function displayRecipes(recipes) {
         `;
     container.innerHTML += recipeCard;
   });
+}
+
+function clearSearchInput() {
+  document.getElementById("searchInput").value = "";
+}
+
+function showLoadingIndicator() {
+  const container = document.getElementById("recipe-container");
+  container.innerHTML = "<p>Loading...</p>";
+}
+
+function hideLoadingIndicator() {
+  const container = document.getElementById("recipe-container");
+  container.innerHTML = "";
+}
+
+function displayErrorMessage(message) {
+  const container = document.getElementById("recipe-container");
+  container.innerHTML = `<p>${message}</p>`;
 }

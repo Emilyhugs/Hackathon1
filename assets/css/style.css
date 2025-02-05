@@ -161,3 +161,30 @@ button {
     width: 30%; /* Three cards per row on larger screens */
   }
 }
+
+/* Footer styling */
+footer {
+  background-color: #fadf7f;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Ensure footer stays at the bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
