@@ -161,3 +161,110 @@ button {
     width: 30%; /* Three cards per row on larger screens */
   }
 }
+
+/* Meal Details */
+.meal-details {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meal-details img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.meal-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.meal-details p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.meal-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.meal-details ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.meal-details a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.meal-details a:hover {
+  background-color: #e65c50;
+}
+
+/* Flexbox layout for ingredients and instructions */
+.meal-details .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.meal-details .content .ingredients,
+.meal-details .content .instructions {
+  flex: 1;
+  padding: 10px;
+}
+
+.meal-details .content .ingredients {
+  text-align: center;
+}
+
+.meal-details .content .instructions {
+  text-align: center;
+}
+/* Media Query: Adjust for Larger Screens (Tablets & Desktops) */
+@media screen and (min-width: 600px) {
+  .recipe-card {
+    width: 45%; /* Two cards per row on tablets */
+  }
+  .meal-details {
+    max-width: 800px; /* Increase max-width for larger screens */
+    padding: 30px; /* Increase padding for larger screens */
+  }
+  .meal-details .content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .meal-details .content .ingredients,
+  .meal-details .content .instructions {
+    flex: 1;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .recipe-card {
+    width: 30%; /* Three cards per row on larger screens */
+  }
+  .meal-details {
+    max-width: 1000px; /* Increase max-width for larger screens */
+    padding: 40px; /* Increase padding for larger screens */
+  }
+}
