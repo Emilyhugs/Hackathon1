@@ -166,11 +166,11 @@ We tested and debugged the site regularly throughout the process, mainly using C
 
 [HTML Validation](https://validator.w3.org/)
 
-![HTML testing](assets/images/html-testing.png)
+![HTML testing]()
 
 [CSS Validation](https://jigsaw.w3.org/css-validator/)
 
-![CSS testing](assets/images/css-validator.png)
+![CSS testing]()
 
 [JS Validation](https://jshint.com/)
 
